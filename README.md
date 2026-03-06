@@ -7,7 +7,7 @@ A comprehensive Power BI dashboard that analyzes customer churn behavior in the 
 Banking institutions face challenges in customer retention. Identifying the characteristics of customers likely to churn enables banks to proactively address issues and improve services. This project analyzes key metrics to uncover churn drivers.
 
 # 📂 Project Overview
-Tool Used: Power BI, python , SQL SERVER
+Tool Used: Power BI, Python , SQL Server
 
 # Total vs. Active vs. Inactive Customers
 Credit Card vs. Non-Credit Card Holders
