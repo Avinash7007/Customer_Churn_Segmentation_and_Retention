@@ -1,83 +1,97 @@
-# 📊 Customer Churn Analysis
+# 📊 Customer Churn Analysis — Power BI Dashboard
 
-A comprehensive Power BI dashboard that analyzes customer churn behavior in the banking sector. This project helps stakeholders understand patterns leading to customer attrition and provides insights for improving retention strategies.
+An end-to-end **customer churn analytics** dashboard built in **Power BI** to analyze attrition patterns in the banking sector.  
+This project helps stakeholders identify churn drivers, monitor retention performance, and design targeted intervention strategies.
 
-# 🧠 Problem Statement
+---
 
-Banking institutions face challenges in customer retention. Identifying the characteristics of customers likely to churn enables banks to proactively address issues and improve services. This project analyzes key metrics to uncover churn drivers.
+## 📌 Problem Statement
 
-# 📂 Project Overview
-Tool Used: Power BI, Python , SQL Server
+Banks face growing challenges in retaining customers due to competition, service expectations, and product differentiation.  
+This project analyzes customer behavior, demographics, and product usage patterns to identify churn risks and support data-driven retention strategies.
 
-# Total vs. Active vs. Inactive Customers
-Credit Card vs. Non-Credit Card Holders
+---
 
-Monthly Churn and Retention Trends
+## 🛠 Tools & Technologies
 
-Customer Distribution by Geography and Tenure
+- **Power BI** — Data modeling & dashboard development  
+- **DAX** — KPI and churn calculations  
+- **Power Query (M)** — Data cleaning & transformation  
+- **SQL Server** — Data extraction  
+- **Python** — Exploratory analysis (ad-hoc)
 
-Impact of Features like Balance, Tenure, and Services Used on Churn
+---
 
-# Data Model View
-![Data model](https://github.com/user-attachments/assets/259ee446-dbd0-4ca6-b2f3-7de62e2f590e)
+## 📂 Project Overview
 
+The dashboard analyzes customer churn using key behavioral and demographic dimensions:
 
-# Dashboard View 
-![Summary](https://github.com/user-attachments/assets/6c7c5dab-0a7c-41db-9cfd-02a2bb766ca0)
+- Total vs Active vs Inactive Customers  
+- Credit Card vs Non-Credit Card Customers  
+- Monthly churn and retention trends  
+- Customer distribution by geography & tenure  
+- Impact of balance, tenure, and service usage on churn  
 
-![All kpi (2)](https://github.com/user-attachments/assets/e34cd70c-1e69-4656-a16e-5e5ab63ff777)
+---
 
-# 📈 Dashboard Insights
-KPIs Tracked:
-Total Customers
+## 🧩 Data Model
 
-Active vs. Inactive Customers
+![Data Model](https://github.com/user-attachments/assets/0188685a-59f4-48bb-895d-ed11087146bc)
 
-Credit Card Holders
+---
 
-Churned Customers (Exited)
+## 📊 Dashboard Preview
 
-Retained Customers
+![Customer Churn Dashboard](https://github.com/user-attachments/assets/26829471-d15e-43dc-bb3a-7513b4c3f885)
 
-Monthly Customer Trends
+![KPI Overview](https://github.com/user-attachments/assets/3c9d207f-2af4-4ea9-8360-47b141f0b66d)
 
-Churn by Geography, Gender, and Age
+---
 
-Tenure and Balance Analysis
+## 📈 Key KPIs Tracked
 
-# Visualizations:
+- Total Customers  
+- Active vs Inactive Customers  
+- Credit Card Holders  
+- Exit (Churned) Customers  
+- Retained Customers  
+- Monthly Churn Trends  
+- Churn by Geography, Gender, and Age  
+- Tenure & Balance Impact  
 
-Bar & Column Charts – Churn rate by demographics
+---
 
-Line Charts – Monthly churn and retention trends
+## 🔍 Key Insights
 
-Pie Charts – Service usage and credit card distribution
+- Higher churn observed among **inactive members** and **non-credit card customers**  
+- Customers with lower tenure show higher exit probability  
+- Regional differences indicate operational or service variation  
+- Monthly churn spikes highlight seasonal behavioral patterns  
 
-Slicers – Filter by Geography, Gender, and Credit Card status
+---
 
-Cards – Display key KPIs
+## 📊 Visualizations Used
 
-# 📌 Features
+- **Bar & Column Charts** — Churn by demographics  
+- **Line Charts** — Monthly churn trends  
+- **Donut Charts** — Customer distribution  
+- **Cards** — KPI monitoring  
+- **Slicers** — Geography, Gender, Credit Card filters  
 
-Fully interactive slicers and filters
+---
 
-Drill-down capabilities for detailed view
+## ⚙️ Features
 
-Industry-standard report layout for executive presentation
+- Fully interactive filters & slicers  
+- Drill-down capabilities for granular analysis  
+- Executive-ready layout  
+- Scalable KPI framework using DAX  
 
-Custom DAX measures for accurate KPIs
+---
 
-# 🛠️ Technical Stack
+## 🧮 Sample DAX Measures
 
-Power BI Desktop for data modeling and visualization
-
-DAX (Data Analysis Expressions) for calculated columns and measures
-
-Power Query (M language) for data cleaning and transformation
-
-
-# 🧮 Sample DAX Measures
-
+```dax
 Exit Customers =
 CALCULATE(
     COUNTROWS(CustomerData),
@@ -92,3 +106,25 @@ CALCULATE(
 
 Churn Rate (%) =
 DIVIDE([Exit Customers], [Total Customers]) * 100
+
+```
+📂 Repository Structure
+```
+customer-churn-analysis/
+│
+├── customer-churn-analysis.pbix
+├── screenshots/
+└── README.md
+```
+👤 Author
+```
+Avinash Dubey — Data Analyst (≈3 YOE)
+
+📧 dubeyavinash157@gmail.com
+
+🔗 LinkedIn: https://www.linkedin.com/in/avinash7007/
+
+🌐 Portfolio: https://avinash7007.github.io/avinash-portfolio/
+
+🐙 GitHub: https://github.com/Avinash7007
+
