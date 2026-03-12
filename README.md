@@ -44,13 +44,15 @@ The analysis evaluates churn behavior using key customer and behavioral dimensio
 ---
 
 ## 📊 Dashboard Preview
-![Data Model]<img width="562" height="295" alt="Data Model" src="https://github.com/user-attachments/assets/cd563acf-5694-4583-8427-87318602a1a4" />
 
-![Customer Churn ]<img width="562" height="324" alt="Customer Churn Dashboard" src="https://github.com/user-attachments/assets/1b151f46-cb8d-4b73-bab0-6c011710b9e2" />
+### Data Model
+![Data Model](https://github.com/user-attachments/assets/cd563acf-5694-4583-8427-87318602a1a4)
 
+### Customer Churn Dashboard
+![Customer Churn Dashboard](https://github.com/user-attachments/assets/1b151f46-cb8d-4b73-bab0-6c011710b9e2)
 
-![KPI Overview]---<img width="592" height="328" alt="KPI Overview" src="https://github.com/user-attachments/assets/7b9b9155-fa2a-422d-90ff-606dafc87e95" />
-
+### KPI Overview
+![KPI Overview](https://github.com/user-attachments/assets/7b9b9155-fa2a-422d-90ff-606dafc87e95)
 
 ## 🔍 Key Insights
 
