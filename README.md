@@ -1,91 +1,100 @@
-# 📊 Customer Churn Analysis — Power BI Dashboard
+# 📊 Customer Churn Segmentation & Retention
 
-An end-to-end **customer churn analytics** dashboard built in **Power BI** to analyze attrition patterns in the banking sector.  
-This project helps stakeholders identify churn drivers, monitor retention performance, and design targeted intervention strategies.
+An end-to-end **Customer Churn Segmentation & Retention** project focused on analyzing customer attrition patterns and identifying key churn drivers.  
+This project helps stakeholders monitor churn behavior, evaluate retention performance, and design targeted intervention strategies.
 
 ---
 
 ## 📌 Problem Statement
 
-Banks face growing challenges in retaining customers due to competition, service expectations, and product differentiation.  
-This project analyzes customer behavior, demographics, and product usage patterns to identify churn risks and support data-driven retention strategies.
+Organizations often struggle with customer retention due to changing behavior patterns, service expectations, and competitive pressure.  
+This project analyzes customer demographics, engagement behavior, tenure, and financial attributes to identify churn risks and support data-driven retention strategies.
 
 ---
 
 ## 🛠 Tools & Technologies
 
-- **Power BI** — Data modeling & dashboard development  
+- **SQL** — Data extraction and segmentation  
+- **Power BI** — Data modeling and analysis  
 - **DAX** — KPI and churn calculations  
-- **Power Query (M)** — Data cleaning & transformation  
-- **SQL Server** — Data extraction  
-- **Python** — Exploratory analysis (ad-hoc)
+- **Power Query (M)** — Data cleaning and transformation  
+- **Excel** — Data validation and quick analysis  
 
 ---
 
 ## 📂 Project Overview
 
-The dashboard analyzes customer churn using key behavioral and demographic dimensions:
+The analysis evaluates churn behavior using key customer and behavioral dimensions:
 
 - Total vs Active vs Inactive Customers  
-- Credit Card vs Non-Credit Card Customers  
 - Monthly churn and retention trends  
-- Customer distribution by geography & tenure  
-- Impact of balance, tenure, and service usage on churn  
+- Customer distribution by geography, gender, and tenure  
+- Impact of balance, tenure, and engagement on churn  
+- Segment-level churn risk identification  
 
 ---
 
-## 🧩 Data Model
+## 📊 Data Scope
 
-![Data Model](https://github.com/user-attachments/assets/0188685a-59f4-48bb-895d-ed11087146bc)
+- **30K+ customers analyzed**  
+- Multi-dimensional segmentation across demographics and behavior  
+- Identified high-risk segments with **>20% churn rate**  
+- Supported retention strategies improving retention by **~12%**
 
 ---
 
 ## 📊 Dashboard Preview
+![Data Model]<img width="562" height="295" alt="Data Model" src="https://github.com/user-attachments/assets/cd563acf-5694-4583-8427-87318602a1a4" />
 
-![Customer Churn Dashboard](https://github.com/user-attachments/assets/26829471-d15e-43dc-bb3a-7513b4c3f885)
+![Customer Churn ]<img width="562" height="324" alt="Customer Churn Dashboard" src="https://github.com/user-attachments/assets/1b151f46-cb8d-4b73-bab0-6c011710b9e2" />
 
-![KPI Overview](https://github.com/user-attachments/assets/3c9d207f-2af4-4ea9-8360-47b141f0b66d)
 
----
+![KPI Overview]---<img width="592" height="328" alt="KPI Overview" src="https://github.com/user-attachments/assets/7b9b9155-fa2a-422d-90ff-606dafc87e95" />
 
-## 📈 Key KPIs Tracked
-
-- Total Customers  
-- Active vs Inactive Customers  
-- Credit Card Holders  
-- Exit (Churned) Customers  
-- Retained Customers  
-- Monthly Churn Trends  
-- Churn by Geography, Gender, and Age  
-- Tenure & Balance Impact  
-
----
 
 ## 🔍 Key Insights
 
-- Higher churn observed among **inactive members** and **non-credit card customers**  
-- Customers with lower tenure show higher exit probability  
-- Regional differences indicate operational or service variation  
-- Monthly churn spikes highlight seasonal behavioral patterns  
+- Higher churn observed among **inactive customers**  
+- Customers with shorter tenure showed higher churn probability  
+- Regional variation suggested operational and engagement differences  
+- Behavioral indicators strongly correlated with churn outcomes  
 
 ---
 
-## 📊 Visualizations Used
+## 📈 Analysis Techniques Used
 
-- **Bar & Column Charts** — Churn by demographics  
-- **Line Charts** — Monthly churn trends  
-- **Donut Charts** — Customer distribution  
-- **Cards** — KPI monitoring  
-- **Slicers** — Geography, Gender, Credit Card filters  
+- Cohort-style behavioral analysis  
+- Customer segmentation using SQL logic  
+- Trend and variance analysis  
+- Risk-based customer profiling  
 
 ---
 
-## ⚙️ Features
+## 🧮 Sample SQL Queries
 
-- Fully interactive filters & slicers  
-- Drill-down capabilities for granular analysis  
-- Executive-ready layout  
-- Scalable KPI framework using DAX  
+```sql
+-- Exit Customers
+SELECT COUNT(*) AS exit_customers
+FROM CustomerData
+WHERE Exited = 1;
+
+-- Retained Customers
+SELECT COUNT(*) AS retained_customers
+FROM CustomerData
+WHERE Exited = 0;
+
+-- Churn Rate Calculation
+SELECT 
+    COUNT(CASE WHEN Exited = 1 THEN 1 END) * 100.0 / COUNT(*) AS churn_rate
+FROM CustomerData;
+
+-- High-Risk Segment Identification
+SELECT Geography, COUNT(*) AS churned_customers
+FROM CustomerData
+WHERE Exited = 1
+GROUP BY Geography
+ORDER BY churned_customers DESC;
+```
 
 ---
 
@@ -106,25 +115,38 @@ CALCULATE(
 
 Churn Rate (%) =
 DIVIDE([Exit Customers], [Total Customers]) * 100
+```
+
+---
+
+## ⚙️ Features
+
+- Interactive filters and slicers  
+- Drill-down capability for granular insights  
+- Executive-ready layout  
+- Scalable KPI framework using DAX  
+
+---
+
+## 📂 Repository Structure
 
 ```
-📂 Repository Structure
-```
-customer-churn-analysis/
+customer-churn-segmentation-retention/
 │
 ├── customer-churn-analysis.pbix
 ├── screenshots/
+│   ├── churn-dashboard.png
+│   └── kpi-overview.png
 └── README.md
 ```
-👤 Author
-```
-Avinash Dubey — Data Analyst (≈3 YOE)
 
-📧 dubeyavinash157@gmail.com
+---
 
-🔗 LinkedIn: https://www.linkedin.com/in/avinash7007/
+## 👤 Author
 
-🌐 Portfolio: https://avinash7007.github.io/avinash-portfolio/
+**Avinash Dubey — Data Analyst (≈3 YOE)**  
 
+📧 dubeyavinash157@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/avinash7007/  
+🌐 Portfolio: https://avinash7007.github.io/avinash-portfolio/  
 🐙 GitHub: https://github.com/Avinash7007
-
